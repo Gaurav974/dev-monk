@@ -1,0 +1,68 @@
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 49, 49);
+
+    .auth-form {
+        max-width: 90%;
+        width: 600px;
+    }
+    @media all  and (min-width: 352px )and (max-width: 600px) {
+        .auth-form{
+          width: 100%;
+          margin-left: 20px;
+        }
+      }
+    .dontAcc {
+        display: block;
+        margin: 16px 0 0;
+
+        a:link,
+        a:visited {
+            color: red;
+        }
+
+    }
+
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-container .mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.mat-form-field {
+    max-width: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+  
+main {
+    margin: 30px;
+  }
+mat-toolbar a:active,a:hover,a:focus {
+        background-color: #3db3b5;
+        color: #ffffff;
+    }
+.sideNavi{
+    margin-left: auto;
+ }
+

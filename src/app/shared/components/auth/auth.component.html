@@ -1,0 +1,31 @@
+
+<div class="main" >
+  <form  [formGroup]="SingInForm" (ngSubmit)="OnclickHandler()">
+    <mat-card class="card auth-form">
+      <mat-card-content >
+          <div class="lgIn mb-3" >
+              <h3>
+                  Log In
+              </h3>
+              <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input #Useremail matInput placeholder="pat@example.com" formControlName="UserEmail" id="UserEmail" />
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                  <mat-label>Enter your password</mat-label>
+                  <input #passWorddta appNoPastePassword matInput [type]="hide ? 'password' : 'text'" />
+                  <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{
+                      hide ? "visibility_off" : "visibility"
+                      }}</mat-icon>
+                  </button>
+              </mat-form-field>
+              <div class="text-right mt-2" >
+                  <button  mat-raised-button color="primary" (click)="OnloginHandler(Useremail.value,passWorddta.value)" routerLink="/home" type="button">logIn</button>
+              </div>
+          </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>    

@@ -1,0 +1,39 @@
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav>
+        <mat-nav-list (click)="sidenav.close()">
+            <a mat-list-item routerLink="addmin" >
+                <mat-icon>library_books</mat-icon>
+                <span>Dashboard</span>
+            </a>
+            <a mat-list-item (click)=" OnlogIn()">
+                <mat-icon>account_circle</mat-icon>
+                Log in
+            </a>
+            <a mat-list-item (click)="OnLogOut()">
+                <mat-icon  color="warn">account_circle</mat-icon>
+                <span >Log out</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-toolbar color="primary" >
+        <button mat-icon-button (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a mat-button  routerLink="home">
+            <span>home</span>
+        </a>
+        <a mat-button  routerLink="addmin" routerLinkActive="active">
+            <span>Dashboard</span>
+        </a>
+        <a mat-button class="ml-2" (click)=" OnlogIn()">
+            <mat-icon>account_circle</mat-icon>
+            Log in
+        </a>
+        <a mat-button (click)="OnLogOut()" >
+            <mat-icon color="warn">account_circle</mat-icon>
+            Log Out
+        </a>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
